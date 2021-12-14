@@ -190,6 +190,7 @@ GestionProduits:
         exit(0);
         break;
     }
+    goto MenuPrincipal;
 MenuVenteStatistique:
     printf("\n");
     printf("* Menu Vente et Statistique               *\n");
@@ -257,4 +258,5 @@ Statistique:
         exit(0);
         break;
     }
+    goto MenuPrincipal;
 }
