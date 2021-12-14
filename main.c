@@ -222,6 +222,7 @@ MenuVenteStatistique:
         exit(0);
         break;
     }
+    goto MenuPrincipal;
 Statistique:
     printf("\n");
     printf("*  Menu Vente et Statistique/Statistique  *\n");
