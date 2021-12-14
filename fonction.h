@@ -73,7 +73,7 @@ void AfficherStock(Produit Stock[100][50], int TabQuantite[50], int Nbtype){
     printf("* --------------------------------------- *\n");
     for(int j=0; j < Nbtype; j++){
         for (int k=0; k < TabQuantite[j]; k++){
-            printf("* %s         %s    %d   %d     %d/%d/%d *\n", Stock[k][j].Typ.Cat.NomCat, Stock[k][j].Typ.NomType, TabQuantite[j], Stock[k][j].id, Stock[k][j].Date_expiration.JJ, Stock[k][j].Date_expiration.MM, Stock[k][j].Date_expiration.AA );
+            printf("* %s       %s    %d   %d     %d/%d/%d *\n", Stock[k][j].Typ.Cat.NomCat, Stock[k][j].Typ.NomType, TabQuantite[j], Stock[k][j].id, Stock[k][j].Date_expiration.JJ, Stock[k][j].Date_expiration.MM, Stock[k][j].Date_expiration.AA );
         }
     }
     printf("* --------------------------------------- *\n");
@@ -98,7 +98,7 @@ void AjouterCat(Categorie TabCat[20], int *NbCat){
     if(!exist){
         TabCat[p] = Cat;
         p++;
-        *NbCat = exist;
+        *NbCat = p;
     }
 }
 
