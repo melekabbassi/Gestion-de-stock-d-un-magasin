@@ -127,7 +127,7 @@ void SupprimerCat(Categorie TabCat[20], int *NbCat, int idCat){
             *NbCat = pNbCat;
             printf("La Categorie %d est supprimee \n", idCat);
         }else{
-            print("Categorie inexistante \n");
+            printf("Categorie inexistante \n");
         }
     }
 }
@@ -144,7 +144,6 @@ void AjouterTyp(Type TabType[50], int *NbType, Categorie TabCat[20],int NbCat){
     while(i < NbCat){
         if(Typ.Cat.idCat == TabCat[i].idCat && !strcmp(Typ.Cat.NomCat, TabCat[i].NomCat)){
             exist = 1;
-            printf("La Categorie existe\n");
             break;
         }else{
             i++;

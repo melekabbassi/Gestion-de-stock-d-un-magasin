@@ -175,8 +175,8 @@ GestionProduits:
         AjouterPdt(Stock, TabQuantite, TabType);
         break;
     case '2':
-        Produit Pdt;
         printf("id Produit: ");
+        Produit Pdt;
         scanf("%d", &Pdt.id);
         SupprimerPdt(Stock, TabQuantite, Pdt, NbType);
         break;
