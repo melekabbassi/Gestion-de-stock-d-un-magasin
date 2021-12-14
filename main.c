@@ -17,7 +17,6 @@ void main(){
 
     int NbCat = 0;
     int NbTyp = 0;
-    int NbType;
     int idCat;
     int idType;
     int idTypeVente;
@@ -140,12 +139,12 @@ GestionTypes:
     switch (choixGestionType)
     {
     case '1':
-        AjouterTyp(TabType, &NbType, TabCat, NbCat);
+        AjouterTyp(TabType, &NbTyp, TabCat, NbCat);
         break;
     case '2':
         printf("id Type: ");
         scanf("%d", &idType);
-        SupprimerTyp(TabType, &NbType, idType);
+        SupprimerTyp(TabType, &NbTyp, idType);
         break;
     case '3':
         goto MenuGestionStock;
@@ -178,7 +177,7 @@ GestionProduits:
         printf("id Produit: ");
         Produit Pdt;
         scanf("%d", &Pdt.id);
-        SupprimerPdt(Stock, TabQuantite, Pdt, NbType);
+        SupprimerPdt(Stock, TabQuantite, Pdt, NbTyp);
         break;
     case '3':
         goto MenuGestionStock;
@@ -209,7 +208,7 @@ MenuVenteStatistique:
         scanf("%s", nomType);
         printf("id Type: ");
         scanf("%d", &idTypeVente);
-        VendrePdt(Stock, TabQuantite, TabType, NbType, idTypeVente, nomType);
+        VendrePdt(Stock, TabQuantite, TabType, NbTyp, idTypeVente, nomType);
         break;
     case '2':
         goto Statistique;

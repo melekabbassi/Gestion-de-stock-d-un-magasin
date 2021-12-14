@@ -32,13 +32,13 @@ void InitDate(MaDate* Date){
     {
         printf("JJ: ");
         scanf("%d", &Date->JJ);
-    }while (Date->JJ < 0 || Date->JJ > 31);
+    }while (Date->JJ < 1 || Date->JJ > 31);
 
     do
     {
         printf("MM: ");
         scanf("%d", &Date->MM);
-    }while (Date->MM < 0 || Date->MM > 12);
+    }while (Date->MM < 1 || Date->MM > 12);
     
     do
     {
@@ -80,7 +80,7 @@ void AfficherStock(Produit Stock[100][50], int TabQuantite[50], int Nbtype){
 }
 
 // Ajouter et Supprimer une Catégorie
-void AjouterCat(Categorie TabCat[20], int* NbCat){
+void AjouterCat(Categorie TabCat[20], int *NbCat){
     int p = *NbCat;
     Categorie Cat;
     InitCat(&Cat);
