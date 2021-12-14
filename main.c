@@ -83,6 +83,7 @@ MenuGestionStock:
         break;
     case '4':
         AfficherStock(Stock, TabQuantite, NbTyp);
+        goto MenuPrincipal;
         break;
     case '5':
         goto MenuPrincipal;
@@ -113,6 +114,7 @@ GestionCategories:
         printf("id Categorie: ");
         scanf("%d", &idCat);
         SupprimerCat(TabCat, &NbCat, idCat);
+        goto MenuPrincipal;
         break;
     case '3':
         goto MenuGestionStock;
@@ -145,6 +147,7 @@ GestionTypes:
         printf("id Type: ");
         scanf("%d", &idType);
         SupprimerTyp(TabType, &NbTyp, idType);
+        goto MenuPrincipal;
         break;
     case '3':
         goto MenuGestionStock;
