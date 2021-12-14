@@ -20,6 +20,11 @@ void main(){
     int NbType;
     int idCat;
     int idType;
+    int idTypeVente;
+    int AA;
+    int MM;
+
+    char nomType[20];
     
     char choixMenuPricipal, choixMenuGestionStock, choixGestionCategorie, choixGestionType, choixGestionProduit, choixVenteStatistique, choixStatistique;
 
@@ -167,10 +172,13 @@ GestionProduits:
     switch (choixGestionProduit)
     {
     case '1':
-        //AjouterPdt();
+        AjouterPdt(Stock, TabQuantite, TabType);
         break;
     case '2':
-        //SupprimerPdt();
+        Produit Pdt;
+        printf("id Produit: ");
+        scanf("%d", &Pdt.id);
+        SupprimerPdt(Stock, TabQuantite, Pdt, NbType);
         break;
     case '3':
         goto MenuGestionStock;
@@ -197,7 +205,11 @@ MenuVenteStatistique:
     switch (choixVenteStatistique)
     {
     case '1':
-        //VendrePdt();
+        printf("Nom Type: ");
+        scanf("%s", nomType);
+        printf("id Type: ");
+        scanf("%d", &idTypeVente);
+        VendrePdt(Stock, TabQuantite, TabType, NbType, idTypeVente, nomType);
         break;
     case '2':
         goto Statistique;
@@ -224,10 +236,16 @@ Statistique:
     switch(choixStatistique)
     {
     case '1':
-        //StatMois();
+        printf("AA: ");
+        scanf("%d", &AA);
+        printf("MM: ");
+        scanf("%d", &MM);
+        StatMois(AA, MM, TabCat, NbCat);
         break;
     case '2':
-        //StatAnnee();
+        printf("AA: ");
+        scanf("%d", &AA);
+        StatAnnee(AA, TabCat, NbCat);
         break;
     case '3':
         goto MenuVenteStatistique;

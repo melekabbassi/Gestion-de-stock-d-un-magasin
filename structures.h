@@ -26,3 +26,8 @@ typedef struct Produit{
     Type Typ;
     MaDate Date_expiration;
 }Produit;
+
+typedef struct Vente{
+    Produit Pdt;
+    MaDate DateVente;
+}Vente;
