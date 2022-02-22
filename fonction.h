@@ -293,7 +293,7 @@ void VendrePdt(Produit Stock[100][50], int TabQuantite[50], Type TabType[50], in
             V.Pdt = Pdt;
             V.DateVente = Date;
 
-        FILE *fptr = fopen("Traces.txt", "w");
+        FILE *fptr = fopen("Traces.txt", "a");
         fprintf(fptr,"%d %s %d %s %d %s  %d/%d/%d", V.Pdt.id, V.Pdt.Nom, V.Pdt.Typ.idType, V.Pdt.Typ.NomType, V.Pdt.Typ.Cat.idCat, V.Pdt.Typ.Cat.NomCat, V.DateVente.JJ, V.DateVente.MM, V.DateVente.AA);
         fclose(fptr);
         }
